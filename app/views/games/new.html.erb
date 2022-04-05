@@ -1,0 +1,10 @@
+
+ <h2>Your grid is:</h2>
+ <h3> <%= @letters %> </h3>
+
+<p>Please type your word:</p>
+<form action="/score" method="post">
+  <input type="text" name="input">
+  <input type="submit" value="Submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
